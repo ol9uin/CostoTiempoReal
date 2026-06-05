@@ -154,6 +154,33 @@
             margin-top: 8px;
             font-style: italic;
         }
+
+        /* --- ESTILO RECORDATORIO NEÓN FINAL --- */
+        .recordatorio-final {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            border: 2px dashed var(--color-titulo);
+            background-color: var(--bg-paso);
+            
+            /* Color base naranja neón para modo claro */
+            color: #d35400; 
+            
+            /* Efecto de resplandor sutil para fondo claro */
+            text-shadow: 0 0 8px rgba(211, 84, 0, 0.2);
+        }
+
+        /* Ajuste de brillo neón de alta visibilidad para modo oscuro */
+        @media (prefers-color-scheme: dark) {
+            .recordatorio-final {
+                color: #ff9100;
+                text-shadow: 0 0 12px rgba(255, 145, 0, 0.6), 
+                             0 0 25px rgba(255, 145, 0, 0.3);
+            }
+        }
     </style>
 </head>
 <body>
@@ -221,6 +248,11 @@
                     <span class="pie-imagen">Figura 4: Interfaz de confirmación de éxito.</span>
                 </div>
             </section>
+
+            <!-- RECORDATORIO FINAL CON FORMATO NEÓN -->
+            <div class="recordatorio-final">
+                ⚠️ IMPORTANTE: Recuerda pulsar el botón [Listo] en la esquina superior para continuar con el atajo; de lo contrario, este se cerrará y perderás el progreso.
+            </div>
         </main>
 
     </div>
